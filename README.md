@@ -1,0 +1,2 @@
+# InterpolasiLinier
+Interpolasi Linier

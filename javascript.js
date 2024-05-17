@@ -129,7 +129,7 @@ document.getElementById('save').addEventListener('click', function() {
 
 document.getElementById('help').addEventListener('click', function() {
     console.log('HELP telah diklik.');
-    var url = 'http://docs.google.com/gview?url=http://yourwebsite.com/pdf/Manual_Book.pdf&embedded=true';
+    var url = 'https://rendinurfauzi.github.io/InterpolasiLinier/pdf/Manual_Boox.pdf';
     window.open(url, '_blank');
 });
 

@@ -1,14 +1,15 @@
+
 .interpolasi-linear.root {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #0f051d;
-  border-radius: 10px 10px 10px 10px;
+  background-color: #000000;
   outline: 1.5613855124px solid rgba(255, 255, 255, 0.2);
   outline-offset: -1.5613855124px;
   box-shadow: 0px 6.2455420494px 146.7702331543px 0px rgba(0, 0, 0, 0.447);
   overflow: hidden;
 }
+
 .interpolasi-linear .flex_col {
   position: relative;
   display: flex;
@@ -19,6 +20,7 @@
   width: 92.19%;
   max-width: 1180.0250244141px;
 }
+
 @media (max-width: 575px) {
   .interpolasi-linear .flex_col {
     margin: 15px auto 80px;
@@ -87,10 +89,13 @@
   justify-content: center;
   align-items: center;
   font: 700 48px/1.51 "Space Grotesk", Helvetica, Arial, serif;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   letter-spacing: 0.34px;
+  animation: glowingText 5s infinite alternate;
 }
+
+
 @media (max-width: 991px) {
   .interpolasi-linear .hero_title {
     font-size: 44px;
@@ -140,17 +145,20 @@
   }
 }
 .interpolasi-linear .medium_title {
+  text-decoration: none; /* Menghapus garis bawah */
   position: relative;
   display: flex;
   justify-content: center;
   font: 700 25px/1.44 "Space Grotesk", Helvetica, Arial, serif;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Tambahkan transisi untuk warna dan text-shadow */
 }
-.interpolasi-linear .medium_title:hover {
-  color: #910000; /* Jaga warna teks tetap putih */
-  cursor: pointer; /* Ubah cursor menjadi pointer untuk memberi indikasi bisa diklik */
 
+.interpolasi-linear .medium_title:hover {
+  color: #1e00ff; /* Jaga warna teks tetap putih */
+  cursor: pointer; /* Ubah cursor menjadi pointer untuk memberi indikasi bisa diklik */
+  text-shadow: 0 0 55px rgb(44, 122, 255); /* Tambahkan glow putih */
 }
 @media (max-width: 991px) {
   .interpolasi-linear .medium_title {
@@ -183,7 +191,7 @@
   margin: 1px 0px 0px;
   width: 811px;
   min-width: 0px;
-  background-color: #c1bfbf;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
   border-radius: 10px 10px 10px 10px;
 }
 @media (max-width: 1199px) {
@@ -243,7 +251,7 @@
   display: flex;
   margin: 1px 0px 0px;
   font: 400 32px/1 "Open Sans", Helvetica, Arial, serif;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 @media (max-width: 1199px) {
   .interpolasi-linear .title {
@@ -276,6 +284,7 @@
   background-color: #002a68;
   border-radius: 10px 10px 10px 10px;
   padding: 13px 38px 13px 38px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 @media (max-width: 991px) {
   .interpolasi-linear .btn {
@@ -303,10 +312,10 @@
   display: flex;
   flex-direction: column;
   margin: 0px 0px 0px 2px;
-  background-color: #c1bfbf;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
   border-radius: 10px 10px 10px 10px;
 }
-.interpolasi-linear .flex_col3 {
+.interpolasi-linear .flex_col3{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -339,7 +348,20 @@
 .interpolasi-linear .medium_title2 {
   position: relative;
   font: 600 25px/1 "Open Sans", Helvetica, Arial, serif;
-  color: black;
+  color: rgb(255, 255, 255);
+  animation: glowingText 5s infinite alternate;
+}
+
+@keyframes glowingText {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 51, 255, 0.179);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(13, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(47, 0, 255, 0.166);
+  }
 }
 @media (max-width: 991px) {
   .interpolasi-linear .medium_title2 {
@@ -369,7 +391,7 @@
 .interpolasi-linear .medium_title3 {
   position: relative;
   font: 400 24px/1 "Open Sans", Helvetica, Arial, serif;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 @media (max-width: 991px) {
   .interpolasi-linear .medium_title3 {
@@ -386,8 +408,19 @@
   position: relative;
   width: 100%;
   min-height: 51px;
-  background-color: #efdddd;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
   border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+ 
+}
+
+.interpolasi-linear .kolom_output:hover {
+  box-shadow: 0 8px 55px rgb(8, 0, 255); /* Bayangan lebih besar pada hover */
+  transform: translateY(-2px); /* Efek mengangkat sedikit saat di-hover */
 }
 .interpolasi-linear .flex_col6 {
   position: relative;
@@ -401,7 +434,7 @@
   display: flex;
   flex-direction: column;
   margin: 0px 2px 0px 0px;
-  background-color: #c1bfbf;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
   border-radius: 10px 10px 10px 10px;
 }
 .interpolasi-linear .flex_col7 {
@@ -439,15 +472,25 @@
   position: relative;
   width: 100%;
   min-height: 51px;
-  background-color: #efdddd;
-  border-radius: 10px 10px 10px 10px;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  color: white; /* Warna font putih */
+  font-weight: bold; /* Membuat font menjadi tebal */
+  text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+.interpolasi-linear .kolom_Input:hover {
+  box-shadow: 0 8px 55px rgb(8, 0, 255); /* Bayangan lebih besar pada hover */
+  transform: translateY(-2px); /* Efek mengangkat sedikit saat di-hover */
 }
 .interpolasi-linear .content_box2 {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0px 2px 0px 0px;
-  background-color: #d9d9d9;
+  background: linear-gradient(135deg, #000000 0%, #00214f 100%); /* Gradient dari biru muda ke biru */
   border-radius: 10px 10px 10px 10px;
 }
 .interpolasi-linear .flex_row4 {
@@ -480,6 +523,7 @@
   background-color: #002a68;
   border-radius: 10px 10px 10px 10px;
   padding: 13px 38px 13px 38px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 @media (max-width: 383px) {
   .interpolasi-linear .btn1 {
@@ -500,6 +544,7 @@
   background-color: #002a68;
   border-radius: 10px 10px 10px 10px;
   padding: 13px 28px 13px 28px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 @media (max-width: 383px) {
   .interpolasi-linear .btn2 {
@@ -514,4 +559,218 @@
   background-color: #0044a2; /* Warna lebih gelap dari warna asli */
   color: #ffffff; /* Jaga warna teks tetap putih */
   cursor: pointer; /* Ubah cursor menjadi pointer untuk memberi indikasi bisa diklik */
+  box-shadow: 0 0 55px rgb(0, 106, 255); /* Tambahkan glow biru */
+}
+
+.content-description {
+  padding: 20px;
+  margin: 20px auto; /* Margin horizontal auto untuk tetap terpusat secara horizontal */
+  background-color: #f4f4f400;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  max-width: 800px; /* Batasi lebar maksimum untuk pembacaan yang lebih baik */
+}
+
+.content-description h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center; /* Menjaga judul tetap terpusat */
+}
+
+.content-description p {
+  line-height: 1.6;
+  font-size: 27px;
+  padding: 0 10px; /* Padding horizontal untuk menjaga teks tidak terlalu dekat dengan tepi */
+  text-align: left; /* Atur paragraf agar rata kiri */
+}
+
+.interpolasi-linear .flex_colAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara gambar dan nama */
+  margin-bottom: 1px; /* Mengurangi jarak antar elemen */
+  width: 100%; /* Menetapkan lebar penuh untuk menghindari pergeseran */
+  justify-content: start; /* Menjaga konten rata kiri */
+  color: #ffffff;
+}
+
+.team-member img {
+  width: 100px; /* Atur lebar gambar */
+  height: 100px; /* Atur tinggi gambar */
+  border-radius: 5%; /* Membuat gambar bulat */
+}
+
+.team-member p {
+  margin: 0;
+  font-size: 16px;
+  overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
+  text-overflow: ellipsis; /* Menambahkan ellipsis jika teks terpotong */
+  font-weight: bold; /* Membuat teks nama menjadi tebal */
+  color: #ffffff;
+}
+
+
+/* Style untuk modal */
+
+/* Style untuk konten modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% dari atas dan di tengah secara horizontal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Lebar konten modal */
+  box-shadow: 0 4px 8px 0 rgba(101, 147, 255, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Bayangan untuk modal */
+}
+
+/* Tombol untuk menutup modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000052;
+  animation: glowAnimation 2s infinite ease-in-out;
+}
+@keyframes glowAnimation {
+  0%, 100% {
+    box-shadow: 0 0 5px 0 rgba(251, 251, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 82, 0.75);
+  }
+}
+
+/* Style untuk tombol di dalam modal */
+/* Style untuk konten modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% dari atas dan di tengah secara horizontal */
+  padding: 20px;
+  border: 1px solid #001380;
+  width: 80%; /* Lebar konten modal */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Bayangan untuk modal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animasi fade-out */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.modal {
+  display: none; /* Sembunyikan modal secara default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(135deg, #00000089 0%, #0023548d 100%); /* Gradient dari biru muda ke biru */
+  animation: fadeIn 0.5s; /* Menerapkan animasi fade-in */
+
+}
+
+.modal.fadeOut {
+  animation: fadeOut 0.5s forwards; /* 'forwards' mempertahankan frame terakhir dari animasi */
+}
+
+.modal.hide {
+  animation: fadeOut 0.5s; /* Menerapkan animasi fade-out */
+}
+
+.modal-content button:nth-child(3) { /* Mengubah warna untuk tombol Tidak */
+  background-color: #f44336; /* Warna merah */
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a0048;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  max-width: 150px; /* Menetapkan lebar maksimal untuk tombol */
+}
+
+.modal-content button:hover {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #24007e;
+  box-shadow: 0 8px 55px rgb(8, 0, 255); /* Bayangan lebih besar pada hover */
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  max-width: 150px; /* Menetapkan lebar maksimal untuk tombol */
+  
+}
+
+.firefly {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: flyAround 200s infinite linear, glow 1.5s infinite alternate;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes flyAround {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(calc(100px - var(--randomX)), calc(50px - var(--randomY))); }
+  50% { transform: translate(calc(-100px + var(--randomX)), calc(100px - var(--randomY))); }
+  75% { transform: translate(calc(50px - var(--randomX)), calc(-50px + var(--randomY))); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 var(--min-glow-size, 25px) var(--min-glow-intensity, 15px) rgba(255, 255, 0, 0.567); }
+  50% { box-shadow: 0 0 var(--max-glow-size, 50px) var(--max-glow-intensity, 25px) rgba(255, 255, 0, 0.626); }
 }

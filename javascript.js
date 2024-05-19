@@ -248,6 +248,12 @@ document.getElementById('about').addEventListener('click', function() {
     console.log('ABOUT telah diklik.');
 });
 
+document.getElementById('cancelButton').addEventListener('click', function() {
+    console.log('CANCEL telah diklik.');
+    location.reload(); // Memuat ulang halaman web
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var inputArea = document.getElementById('inputArea');
     var modal = document.getElementById('myModal');
